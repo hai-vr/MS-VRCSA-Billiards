@@ -1,6 +1,13 @@
 ﻿
 using System;
+#if !NOCHAT_ACTIVE
 using UdonSharp;
+#else
+using UdonSharpBehaviour = NochatScript.NochatBehaviour;
+using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
+using BehaviourSyncMode = NochatScript.NochatSyncMode;
+using UdonSynced = NochatScript.NochatSynced;
+#endif
 using VRC.SDKBase;
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]

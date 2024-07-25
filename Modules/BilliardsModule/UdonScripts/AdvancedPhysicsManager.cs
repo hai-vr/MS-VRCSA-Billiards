@@ -1,6 +1,12 @@
 // #define HT8B_DRAW_REGIONS
 using System;
+#if !NOCHAT_ACTIVE
 using UdonSharp;
+#else
+using UdonSharpBehaviour = NochatScript.NochatBehaviour;
+using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
+using BehaviourSyncMode = NochatScript.NochatSyncMode;
+#endif
 using UnityEngine;
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]

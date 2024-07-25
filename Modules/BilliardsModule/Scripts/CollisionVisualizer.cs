@@ -1,12 +1,20 @@
 ﻿#define HT8B_DRAW_REGIONS
 
 using UnityEngine;
+#if !NOCHAT_ACTIVE
 using VRC.Udon;
+#else
+using NochatScript;
+#endif
 
 [ExecuteInEditMode]
 public class CollisionVisualizer : MonoBehaviour
 {
+#if !NOCHAT_ACTIVE
     [SerializeField] UdonBehaviour table;
+#else
+    [SerializeField] NochatBehaviour table;
+#endif
     [Tooltip("Only works in play mode")]
     public bool getFromTable = false;
     [Tooltip("This function hasn't been updated for MS-VRCSA, may show something incorrect")]
