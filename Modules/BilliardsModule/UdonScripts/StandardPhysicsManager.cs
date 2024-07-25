@@ -1,7 +1,7 @@
 ﻿// #define HT8B_DRAW_REGIONS
 using System;
-using BestHTTP.SecureProtocol.Org.BouncyCastle.Crypto.Modes.Gcm;
 #if !NOCHAT_ACTIVE
+using BestHTTP.SecureProtocol.Org.BouncyCastle.Crypto.Modes.Gcm;
 using UdonSharp;
 #else
 using UdonSharpBehaviour = NochatScript.NochatBehaviour;

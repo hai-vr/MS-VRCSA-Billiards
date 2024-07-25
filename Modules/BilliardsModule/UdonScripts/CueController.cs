@@ -6,9 +6,14 @@ using UdonSharpBehaviour = NochatScript.NochatBehaviour;
 using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
 using UdonSynced = NochatScript.NochatSynced;
+using Networking = NochatScript.NochatNetworking;
+using VRCPlayerApi = NochatScript.NochatPlayerApi;
+using VRC_Pickup = NochatScript.NochatPickup;
 #endif
 using UnityEngine;
+#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
+#endif
 //
 [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
 public class CueController : UdonSharpBehaviour

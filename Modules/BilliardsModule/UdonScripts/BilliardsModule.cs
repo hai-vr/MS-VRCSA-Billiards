@@ -17,6 +17,7 @@ using FieldChangeCallback = NochatScript.NochatFieldChangeCallback;
 using Networking = NochatScript.NochatNetworking;
 using VRCPlayerApi = NochatScript.NochatPlayerApi;
 using Utilities = NochatScript.NochatUtilities;
+using VRC_Pickup = NochatScript.NochatPickup;
 #endif
 using UnityEngine;
 using UnityEngine.UI;

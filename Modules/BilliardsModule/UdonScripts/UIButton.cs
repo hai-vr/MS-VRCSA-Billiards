@@ -5,10 +5,16 @@ using UdonSharp;
 using UdonSharpBehaviour = NochatScript.NochatBehaviour;
 using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
+using UdonBehaviour = NochatScript.NochatBehaviour;
+using Networking = NochatScript.NochatNetworking;
+using VRCPlayerApi = NochatScript.NochatPlayerApi;
+using VRC_Pickup = NochatScript.NochatPickup;
 #endif
 using UnityEngine;
+#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
 using VRC.Udon;
+#endif
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class UIButton : UdonSharpBehaviour
