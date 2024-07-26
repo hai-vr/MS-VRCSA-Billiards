@@ -1,15 +1,7 @@
 ﻿using UnityEngine;
-#if !NOCHAT_ACTIVE
 using VRC.Udon;
-#else
-using NochatScript;
-#endif
 #if UNITY_EDITOR
-#if !NOCHAT_ACTIVE
 using UdonSharpEditor;
-#else
-using NochatScript.Editor;
-#endif
 using UnityEditor;
 #endif
 
@@ -39,11 +31,7 @@ public class UIButtonVisualizer : MonoBehaviour
             UIButtonVisualizer visualizer = (UIButtonVisualizer)target;
             UIButton module = visualizer.GetComponent<UIButton>();
 
-#if !NOCHAT_ACTIVE
             UdonBehaviour moduleBehaviour = UdonSharpEditorUtility.GetBackingUdonBehaviour(module);
-#else
-            NochatBehaviour moduleBehaviour = NochatEditorUtility.GetBackingNosharpBehaviour(module);
-#endif
             moduleBehaviour.publicVariables.TryGetVariableValue(nameof(UIButton.buttonOff), out Texture2D buttonOff);
             moduleBehaviour.publicVariables.TryGetVariableValue(nameof(UIButton.buttonOn), out Texture2D buttonOn);
             moduleBehaviour.publicVariables.TryGetVariableValue(nameof(UIButton.outlineColor), out Color outlineColor);

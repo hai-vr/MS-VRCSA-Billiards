@@ -6,24 +6,11 @@
 #define HT8B_DEBUGGER
 #endif
 
-#if !NOCHAT_ACTIVE
 using UdonSharp;
-#else
-using UdonSharpBehaviour = NochatScript.NochatBehaviour;
-using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
-using BehaviourSyncMode = NochatScript.NochatSyncMode;
-using UdonBehaviour = NochatScript.NochatBehaviour;
-using FieldChangeCallback = NochatScript.NochatFieldChangeCallback;
-using Networking = NochatScript.NochatNetworking;
-using VRCPlayerApi = NochatScript.NochatPlayerApi;
-using Utilities = NochatScript.NochatUtilities;
-#endif
 using UnityEngine;
 using UnityEngine.UI;
-#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
 using VRC.Udon;
-#endif
 using System;
 using Metaphira.Modules.CameraOverride;
 using TMPro;

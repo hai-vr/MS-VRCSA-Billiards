@@ -1,12 +1,6 @@
 ﻿
 using System;
-#if !NOCHAT_ACTIVE
 using UdonSharp;
-#else
-using UdonSharpBehaviour = NochatScript.NochatBehaviour;
-using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
-using BehaviourSyncMode = NochatScript.NochatSyncMode;
-#endif
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class PracticeManager : UdonSharpBehaviour
