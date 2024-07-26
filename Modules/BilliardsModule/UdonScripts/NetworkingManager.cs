@@ -5,15 +5,10 @@ using UdonSharp;
 using UdonSharpBehaviour = NochatScript.NochatBehaviour;
 using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
-using Networking = NochatScript.NochatNetworking;
-using VRCPlayerApi = NochatScript.NochatPlayerApi;
-using Utilities = NochatScript.NochatUtilities;
 using UdonSynced = NochatScript.NochatSynced;
 #endif
 using UnityEngine;
-#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
-#endif
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
 public class NetworkingManager : UdonSharpBehaviour
@@ -662,12 +657,7 @@ public class NetworkingManager : UdonSharpBehaviour
 
     public void _OnPlayerPrepareShoot()
     {
-#if !NOCHAT_ACTIVE
         SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, nameof(OnPlayerPrepareShoot));
-#else
-        object stub = null;
-        SendCustomNetworkEvent(stub, nameof(OnPlayerPrepareShoot));
-#endif
     }
 
     public void OnPlayerPrepareShoot()

@@ -6,12 +6,9 @@ using UdonSharp;
 using UdonSharpBehaviour = NochatScript.NochatBehaviour;
 using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
-using Networking = NochatScript.NochatNetworking;
 using UdonSynced = NochatScript.NochatSynced;
 #endif
-#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
-#endif
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
 public class PlayerSlot : UdonSharpBehaviour

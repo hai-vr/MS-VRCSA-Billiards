@@ -6,13 +6,9 @@ using UdonSharp;
 using UdonSharpBehaviour = NochatScript.NochatBehaviour;
 using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
-using Networking = NochatScript.NochatNetworking;
-using VRCPlayerApi = NochatScript.NochatPlayerApi;
 #endif
 using UnityEngine;
-#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
-#endif
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class RepositionManager : UdonSharpBehaviour

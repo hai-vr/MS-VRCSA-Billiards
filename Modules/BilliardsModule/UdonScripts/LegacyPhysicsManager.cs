@@ -8,10 +8,8 @@ using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
 #endif
 using UnityEngine;
-#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
 using VRC.Udon;
-#endif
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class LegacyPhysicsManager : UdonSharpBehaviour

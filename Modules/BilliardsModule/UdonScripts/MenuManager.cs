@@ -5,13 +5,10 @@ using UdonSharp;
 using UdonSharpBehaviour = NochatScript.NochatBehaviour;
 using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
-using VRCPlayerApi = NochatScript.NochatPlayerApi;
 #endif
 using UnityEngine;
 using UnityEngine.UI;
-#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
-#endif
 using TMPro;
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]

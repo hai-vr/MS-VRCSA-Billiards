@@ -5,14 +5,10 @@ using UdonSharp;
 using UdonSharpBehaviour = NochatScript.NochatBehaviour;
 using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
-using VRCPlayerApi = NochatScript.NochatPlayerApi;
-using Utilities = NochatScript.NochatUtilities;
 #endif
 using UnityEngine;
-#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
 using VRC.Udon;
-#endif
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class CameraManager : UdonSharpBehaviour

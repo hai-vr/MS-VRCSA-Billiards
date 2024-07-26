@@ -5,12 +5,9 @@ using UdonSharp;
 using UdonSharpBehaviour = NochatScript.NochatBehaviour;
 using UdonBehaviourSyncMode = NochatScript.NochatBehaviourSyncMode;
 using BehaviourSyncMode = NochatScript.NochatSyncMode;
-using VRC_Pickup = NochatScript.NochatPickup;
 #endif
 using UnityEngine;
-#if !NOCHAT_ACTIVE
 using VRC.SDKBase;
-#endif
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class Repositioner : UdonSharpBehaviour
